@@ -89,5 +89,25 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
   ```
   
 # Exploration Installation
+  ```bash
+    mkdir ~/catkin_ws
+    mkdir ~/catkin_ws/src
+    cd ~/catkin_ws/src
+
+    git clone https://github.com/JohanSteenkamp264/Subt-challenge-autonomous-exploration.git
+
+    cd ~/catkin_ws/src/Subt-challenge-autonomous-exploration/Scripts
+    chmod +x *.py
+
+    cd ~/catkin_ws/
+
+     # Source ROS distro's setup.bash
+     source /opt/ros/melodic/setup.bash
+
+      rosdep install --from-paths src --ignore-src -r
+      catkin_make
+    
+  ```
+  
 
 # Running Instructions
