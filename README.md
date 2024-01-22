@@ -119,12 +119,16 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
   ```
 
   ## Starting Exploration Algorithm
-```bash
-  source /opt/ros/melodic/setup.bash
-  source ~/catkin_ws/devel/setup.bash
-  rosrun Subt-challenge-autonomous-exploration exploration.py #{saving path} #{maximum velocity}
-```
+  ```bash
+    source /opt/ros/melodic/setup.bash
+    source ~/catkin_ws/devel/setup.bash
+    rosrun Subt-challenge-autonomous-exploration exploration.py #{saving path} #{maximum velocity}
+  ```
 
   ## Limiting Dataset Length
-    In order to limit the legtn 
+  In order to limit the length in dataset to a number of frames, before a turn around point is searchd for the following two lines in the ***exploration.py*** controls this functionality.
+  ```bash
+    self.limit_Dataset_genetation = True
+    self.limit_index = 6000
+  ```
   
