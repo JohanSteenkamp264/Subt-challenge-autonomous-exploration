@@ -54,10 +54,40 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
       </plugin>
      ```
   3. Increasing pose update frequency
-  4. Realtime Change 
+     In the ***~/subt_ws/src/subt/submitted_models/explorer_ds1_sensor_config_1/launch/spawner.rb*** file change line 23.
+     ```rb
+     <static_update_frequency>1</static_update_frequency>
+     ```
+     to
+     ```rb
+     <static_update_frequency>20</static_update_frequency>
+     ```
+     and line 20
+     ```rb
+     <publish_nested_model_pose>#{$enableGroundTruth}</publish_nested_model_pose>
+     ```
+     to
+     ```rb
+     <publish_nested_model_pose>true</publish_nested_model_pose>
+     ```
 
   ## Building Procedure
+  ```bash
+    # Source ROS distro's setup.bash
+    source /opt/ros/melodic/setup.bash
+    
+    # Build and install into workspace
+    cd ~/subt_ws/
+    rosdep install --from-paths src --ignore-src -r
+    catkin_make -DCMAKE_BUILD_TYPE=Release install
+  ```
 
+## IGN Download Procedure Before First Launch
+  Because of some problems encountered when dounloading during launching the environment the first time. This command does take a lot of time, especially with the ***-j 1** stipulating one thread. This is due to errors encountered when using more than one.
+  ```bash
+    ign fuel download -v 4 -j 1 -u "https://fuel.ignitionrobotics.org/OpenRobotics/collections/SubT Tech Repo"
+  ```
+  
 # Exploration Installation
 
 # Running Instructions
