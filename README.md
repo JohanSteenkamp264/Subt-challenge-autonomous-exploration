@@ -33,8 +33,28 @@ The simulation environment used is the [DARPA Subt](https://github.com/osrf/subt
 mkdir -p ~/subt_ws/src && cd ~/subt_ws/src
 git clone https://github.com/osrf/subt
 ```
+The explourer ds1 robot is used in the recording of datasets, this is becaues of the 100m Lidar for long range path detection and the three depth cameras.
 
   ## Modifications Made to the Simulation Environment
+  1. Removing the battery management plugin
+     In the ***~/subt_ws/src/submitted_models/explorer_ds1_sensor_config_1/launch/spawner.rb*** file line 153 to 166 remove the following lines.
+     ```rb
+     <plugin filename="libignition-gazebo-linearbatteryplugin-system.so"
+        name="ignition::gazebo::systems::LinearBatteryPlugin">
+        <battery_name>linear_battery</battery_name>
+        <voltage>12.694</voltage>
+        <open_circuit_voltage_constant_coef>12.694</open_circuit_voltage_constant_coef>
+        <open_circuit_voltage_linear_coef>-3.1424</open_circuit_voltage_linear_coef>
+        <initial_charge>18.0</initial_charge>
+        <capacity>18.0</capacity>
+        <resistance>0.061523</resistance>
+        <smooth_current_tau>1.9499</smooth_current_tau>
+        <power_load>13.2</power_load>
+        <start_on_motion>true</start_on_motion>
+      </plugin>
+     ```
+  3. Increasing pose update frequency
+  4. Realtime Change 
 
   ## Building Procedure
 
