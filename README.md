@@ -122,7 +122,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
     ```bash
       source /opt/ros/melodic/setup.bash
       source ~/catkin_ws/devel/setup.bash
-      rosrun dataset_collection exploration_algorithm_sm.py /home/johan/Recorded_datasets/cave_circuit_09 
+      rosrun dataset_collection exploration_algorithm_sm.py #{saving path} #{maximum velocity}
     ```
 
   
