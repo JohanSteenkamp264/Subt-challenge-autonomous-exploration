@@ -111,4 +111,18 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
     
 # Running Instructions
 
+  ## Starting the Simulation Environments
+    ```bash
+      source /opt/ros/melodic/setup.bash
+      source ~/subt_ws/install/setup.bash 
+      ign launch -v 4 competition.ign worldName:=cave_circuit_01 circuit:=cave enableGroundTruth:=true robotName1:=X1 robotConfig1:=EXPLORER_DS1_SENSOR_CONFIG_1
+    ```
+
+  ## Starting Exploration Algorithm
+    ```bash
+      source /opt/ros/melodic/setup.bash
+      source ~/catkin_ws/devel/setup.bash
+      rosrun dataset_collection exploration_algorithm_sm.py /home/johan/Recorded_datasets/cave_circuit_09 
+    ```
+
   
