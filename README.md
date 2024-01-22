@@ -89,7 +89,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
   ```
   
 # Exploration Installation
-    ```bash
+  ```bash
     mkdir ~/catkin_ws
     mkdir ~/catkin_ws/src
     cd ~/catkin_ws/src
@@ -107,7 +107,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
     rosdep install --from-paths src --ignore-src -r
     catkin_make
     
-    ```
+  ```
     
 # Running Instructions
 
