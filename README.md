@@ -54,6 +54,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
       </plugin>
      ```
   2. Always enable grund truth
+     
      In the ***~/subt_ws/src/subt/submitted_models/explorer_ds1_sensor_config_1/launch/spawner.rb*** file change line 20.
      ```rb
      <publish_nested_model_pose>#{$enableGroundTruth}</publish_nested_model_pose>
@@ -62,6 +63,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
      <publish_nested_model_pose>true</publish_nested_model_pose>
      ```
   3. Increasing pose update frequency
+     
      In the ***~/subt_ws/src/subt/submitted_models/explorer_ds1_sensor_config_1/launch/spawner.rb*** file change line 23.
      ```rb
      <static_update_frequency>1</static_update_frequency>
