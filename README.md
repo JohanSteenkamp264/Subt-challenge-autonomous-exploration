@@ -37,6 +37,7 @@ The explourer ds1 robot is used in the recording of datasets, this is becaues of
 
   ## Modifications Made to the Simulation Environment
   1. Removing the battery management plugin
+     
      In the ***~/subt_ws/src/submitted_models/explorer_ds1_sensor_config_1/launch/spawner.rb*** file line 153 to 166 remove the following lines.
      ```rb
      <plugin filename="libignition-gazebo-linearbatteryplugin-system.so"
